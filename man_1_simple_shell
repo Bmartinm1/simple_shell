@@ -1,1 +1,18 @@
-man page for simple shell
+NAME:
+Smpl
+
+SYNOPSIS:
+A simple shell. We hope.
+
+DESCRIPTION:
+Ideally a funcitonal shell with a user interface and the functionality for a user to type commands and run programs.
+
+FLAGS:
+None yet
+
+BUGS:
+We'll burn this bridge when we get to it.
+
+AUTHORS:
+Rob Scott <3232@holbertonschool.com>
+Ben MartinMooney <3448@holbertonschool.com>
