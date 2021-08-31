@@ -14,5 +14,5 @@ char fetchenv()
 
   // 2. Iterate through variables to check start of each line against "PATH=" - grep?
 
-  // 3. If a match is found, return that line to to fetchpath
+  // 3. If a match is found, return that line to to fetchpath function
 }
