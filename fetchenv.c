@@ -8,7 +8,7 @@
  * Return: The env variable
  */
 
-char fetchenv()
+char fetchenv(char *target, char **env)
 {
   // 1. Check env is not NULL
 

@@ -11,5 +11,7 @@
 int _putchar(char c);
 int initPrompt(void);
 void _puts(char *str);
+char fetchenv(char *target, char **env);
+char fetchpath(char **env);
 
 #endif

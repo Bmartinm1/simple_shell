@@ -7,7 +7,7 @@
  * Return: double pointer(?) to the path(s) on success.
  */
 
-char fetchPath()
+char fetchPath(char **env)
 {
   // 1. Function needs parse through all env variables to find PATH
   // a. This function will be called fetchenv.c
