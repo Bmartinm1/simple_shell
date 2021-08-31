@@ -9,7 +9,7 @@
 #include <stdbool.h>
 
 int _putchar(char c);
-int newprompt(void);
+int initPrompt(void);
 void _puts(char *str);
 
 #endif
