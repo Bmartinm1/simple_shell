@@ -2,24 +2,13 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#include "shell.h"
+
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and err num is set appropriately.
+ * fetchPID - fetches PID and PPID
  */
 
-int _putchar(char c)
-{
-  return (write(1, &c, 1));
-}
-
-// /**
-//  * main - entry point
-//  */
-
-// int main(void)
+// int fetchPID(void)
 // {
 //   pid_t myPid;
 //   pid_t myPpid;
@@ -30,17 +19,11 @@ int _putchar(char c)
 //   printf("%d\n", myPpid);
 // }
 
-void prompt(void)
-{
-  _putchar('$');
-  _putchar(' ');
-}
-
 /**
  * main function
  */
 
-int main(int ac, char **av)
+int shell(int ac, char **av)
 {
   int i;
   char *input = NULL;
@@ -48,7 +31,7 @@ int main(int ac, char **av)
 
   while (1)
   {
-    prompt();
+    initPrompt();
 
     if (getline(&input, &len, stdin) == -1)
       printf("Nothing to see here\n");

@@ -6,5 +6,9 @@
 
 int initPrompt(void)
 {
+
+  // needs to check that process is associated with a terminal
+  // via isatty()
+
   _puts("$ ");
 }
