@@ -3,13 +3,13 @@
 /**
  * main - simple shell
  * @ac: arg count
- * @av: arg var
- * @env: env var
+ * @av: arg variables
+ * @env: env variables
  * 
  * Return: Hopefully some completed commands
  */
 
-int main(int ac __attribute__((unused)), char **av, char **env)
+int main(int ac __attribute__((unused)), char **av __attribute__((unused)), char **environ)
 {
   int loop = 1;
   char *input = NULL;
@@ -17,9 +17,6 @@ int main(int ac __attribute__((unused)), char **av, char **env)
 
   if (isatty(STDIN_FILENO) == 1)
     ;
-
-  (void)av;
-  (void)env;
 
   while (loop)
   {
