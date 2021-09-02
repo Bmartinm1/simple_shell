@@ -15,7 +15,6 @@ int _putchar(char c);
 void initPrompt(void);
 void _puts(char *str);
 void fetchenv(char **env);
-char fetchpath(char **env);
 int _strcmp(char *s1, char *s2);
 
 #endif
