@@ -1,17 +1,20 @@
 NAME:
-Smpl
+Shell
 
 SYNOPSIS:
-A simple shell. We hope.
+A simple shell.
 
 DESCRIPTION:
-Ideally a funcitonal shell with a user interface and the functionality for a user to type commands and run programs.
+A (barely) funcitonal shell with a user interface and the functionality for a user to type two commands.
 
 FLAGS:
-None yet
+Env
+- This command will print out all environmental variables
+Exit
+- This command will exit the shell
 
 BUGS:
-We'll burn this bridge when we get to it.
+There isn't yet enough functionality to have bugs.
 
 AUTHORS:
 Rob Scott <3232@holbertonschool.com>
