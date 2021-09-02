@@ -9,13 +9,17 @@
  * Return: Hopefully some completed commands
  */
 
-int main(int ac __attribute__((unused)), char **av __attribute__((unused)), char **environ)
+int main(int ac __attribute__((unused)), char **av, char **environ)
 {
 	int loop = 1;
 	char *input = NULL;
 	size_t length;
+	
+	/* using (void)av to allow compilation, a second instance of unused attr was too long for betty */
+	(void)av;
 
-	if (isatty(STDIN_FILENO) == 1);
+	if (isatty(STDIN_FILENO) == 1)
+		;
 
 	while (loop)
 	{
@@ -29,9 +33,9 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)), char
 			loop = 0;
 			exit(0);
 		}
-		
+
 		else if (_strcmp(input, "env\n") == 0)
- 			fetchenv(environ);
+			fetchenv(environ);
 	}
 	return (0);
 }
