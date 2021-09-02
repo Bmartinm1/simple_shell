@@ -8,7 +8,7 @@
 #include <sys/wait.h>
 #include <stdbool.h>
 
-// calling external env variable
+/* calling external env variable */
 extern char **environ;
 
 int _putchar(char c);
