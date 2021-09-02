@@ -8,11 +8,15 @@
  * Return: The env variable
  */
 
-char fetchenv(char *target, char **env)
+void fetchenv(char **env)
 {
+  int i;
   // 1. Check env is not NULL
+  if (!env)
+    printf("Nothing here");
 
-  // 2. Iterate through variables to check start of each line against "PATH=" - grep?
-
-  // 3. If a match is found, return that line to to fetchpath function
+  // 2. Iterate through env variables and send to stdout
+  for (i = 0; env[i]; i++)
+    _puts(env[i]);
+  _putchar('\n');
 }

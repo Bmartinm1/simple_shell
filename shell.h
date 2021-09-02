@@ -7,12 +7,14 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <stdbool.h>
-#
+
+// calling external env variable
+extern char **environ;
 
 int _putchar(char c);
 void initPrompt(void);
 void _puts(char *str);
-char fetchenv(char *target, char **env);
+void fetchenv(char **env);
 char fetchpath(char **env);
 int _strcmp(char *s1, char *s2);
 

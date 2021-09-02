@@ -35,7 +35,7 @@ int main(int ac __attribute__((unused)), char **av, char **env)
     }
 
     else if (_strcmp(input, "env\n") == 0)
-      printf("placeholder for env");
+      fetchenv(environ);
   }
   return (0);
 }
