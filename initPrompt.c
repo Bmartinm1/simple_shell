@@ -4,11 +4,11 @@
  * initPrompt - starts a new prompt
  */
 
-int initPrompt(void)
+void initPrompt(void)
 {
-
   // needs to check that process is associated with a terminal
   // via isatty()
 
-  _puts("$ ");
+  if (isatty(STDIN_FILENO) == 1)
+    _puts("$ ");
 }

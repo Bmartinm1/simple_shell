@@ -1,48 +1,41 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-
 #include "shell.h"
 
 /**
- * fetchPID - fetches PID and PPID
+ * main - simple shell
+ * @ac: arg count
+ * @av: arg var
+ * @env: env var
+ * 
+ * Return: Hopefully some completed commands
  */
 
-// int fetchPID(void)
-// {
-//   pid_t myPid;
-//   pid_t myPpid;
-//   myPid = getpid();
-//   myPpid = getppid();
-
-//   printf("%d\n", myPid);
-//   printf("%d\n", myPpid);
-// }
-
-/**
- * main function
- */
-
-int shell(int ac, char **av)
+int main(int ac __attribute__((unused)), char **av, char **env)
 {
-  int i;
+  int loop = 1;
   char *input = NULL;
-  size_t len;
+  size_t length;
 
-  while (1)
+  if (isatty(STDIN_FILENO) == 1)
+    ;
+
+  (void)av;
+  (void)env;
+
+  while (loop)
   {
     initPrompt();
 
-    if (getline(&input, &len, stdin) == -1)
-      printf("Nothing to see here\n");
-    else
-      printf("%s\n", input);
+    if (getline(&input, &length, stdin) == -1)
+      perror("We've got an error!\n");
 
-    for (i = 0; av[i]; i++)
+    if (_strcmp(input, "exit\n") == 0)
     {
-      printf("av[%d]: %s\n", i, av[i]);
+      loop = 0;
+      exit(0);
     }
-    exit(1);
+
+    else if (_strcmp(input, "env\n") == 0)
+      printf("placeholder for env");
   }
   return (0);
 }

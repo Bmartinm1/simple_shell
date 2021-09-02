@@ -7,11 +7,13 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <stdbool.h>
+#
 
 int _putchar(char c);
-int initPrompt(void);
+void initPrompt(void);
 void _puts(char *str);
 char fetchenv(char *target, char **env);
 char fetchpath(char **env);
+int _strcmp(char *s1, char *s2);
 
 #endif
